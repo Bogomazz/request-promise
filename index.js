@@ -8,7 +8,7 @@ requestPromise.send = (options)=>{
             if (!err){
                 let response = {
                     status: resp.statusCode,
-                    body,
+                    body: JSON.parse(body),
                     headers: resp.headers
                 }
                 resolve(response);
